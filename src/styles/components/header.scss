@@ -1,0 +1,149 @@
+.nav{
+    background-color: transparent;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    transition: $transition-400ms;
+
+    &__container{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__item {
+        font-size: 16px;
+        transition: $transition-400ms;
+        font-weight: 500;
+
+        &:hover {
+            color: #B8B6B6;
+        }
+    }
+
+    &__button { 
+        display: none;
+    }
+}
+
+.window-scroll {
+    background-color: $primary;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    height: 75vh;
+    margin-bottom: 80px;
+    width: 100%;
+    background-color: transparent;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 80px;
+        height: 100%;
+    }
+
+    &__left p {
+        margin: 16px 0 35px;
+        line-height: 1.9;
+    }
+}
+
+//! NAVBAR RESPONSIVE STYLE
+@media screen and (max-width: 1024px) {
+    .nav {
+        &__button { 
+            display: inline-block;
+            background-color: transparent;
+            font-size: 28px;
+            color: $white;
+            cursor: pointer;
+        }
+    
+        &__button#close-menu-btn {
+            display: none;
+        }
+
+        &__menu {
+            position: fixed;
+            top: 80px;
+            right: 5%;
+            height: fit-content;
+            width: 288px;
+            flex-direction: column;
+            gap: 0;
+            display: none;
+        }
+
+        &__link {
+            width: 100%;
+            height: 88px;
+            animation: animateMenu 200ms linear forwards;
+        }
+
+        &__item {
+            background-color: $primary;
+            box-shadow: -64px 96px 160px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+
+            &:hover {
+                background-color: $color-bg1;
+                color: $white;
+            }
+        }
+
+        @keyframes animateMenu {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    }
+    
+    .header {
+        height: 55vh;
+        margin-bottom: 64px;
+
+        &__container {
+            gap: 0;
+            padding-bottom: 48px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .header {
+        height: 90vh;
+
+        &__container {
+            grid-template-columns: 1fr;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        &__right {
+            display: none;
+        }
+    }
+}
+

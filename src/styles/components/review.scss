@@ -1,0 +1,53 @@
+.reviews {
+    background-color: $color-bg1;
+    position: relative;
+    
+    &__container {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .pagination {
+        position: absolute;
+        bottom: 80px;
+        z-index: 3;
+    }
+}
+
+.review {
+    padding-top: 32px;
+    margin-bottom: 30px;
+
+    &__info {
+        text-align: center;
+    }
+
+    &__body {
+        background-color: $color-bg;
+        padding: 32px;
+        margin-top: 48px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            background-color: $color-bg;
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            left: 46%;
+            top: -24px;
+            transform: rotate(45deg);
+
+        }
+    }
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 16px;
+    border: 12px solid $color-bg;
+}

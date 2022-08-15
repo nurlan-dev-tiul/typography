@@ -1,0 +1,68 @@
+.about {
+    background-color: $color-bg1;
+    margin-top: 80px;
+    &__container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+        gap: 80px;
+    }
+
+    &__description {
+        margin: 25px 0 30px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    &__card {
+        background-color: $color-bg;
+        padding: 20px;
+        border-radius: 16px;
+        text-align: center;
+    }
+
+    &__achievement-icon {
+        background-color: $danger;
+        padding: 13px;
+        border-radius: 16px;
+        display: inline-block;
+        font-size: 36px;
+    }
+
+    &__achievement-count {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__right {
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about {
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        &__left {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        margin-top: 0px;
+        &__cards{
+            grid-template-columns: 1fr;
+            gap: 11px;
+        }
+    }
+}

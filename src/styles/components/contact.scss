@@ -1,0 +1,137 @@
+.contact {
+    background-color: $color-bg1;
+    margin-top: 80px;
+
+    &__container {
+        background-color: $color-bg;
+        padding: 64px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 64px;
+        height: 480px;
+        margin: 90px auto;
+        border-radius: 16px;
+    }
+
+    &__aside {
+        background-color: $color-bg2;
+        padding: 48px;
+        border-radius: 16px;
+        position: relative;
+        bottom: 120px;
+    }
+
+    &__image {
+        width: 192px;
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    &__description {
+        font-size: 14px;
+        margin-bottom: 24px;
+        line-height: 1.5;
+    }
+
+    &__link {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 16px;
+        letter-spacing: 1px;
+        font-size: 17px;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin-top: 32px;
+    }
+
+    &__social {
+        a {
+            background-color: $color-bg1;
+            padding: 8px 10px;
+            border-radius: 50%;
+            font-size: 18px;
+            transition: $transition-400ms;
+
+            &:hover {
+                background-color: $color-bg2;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-right: 64px;
+    }
+
+    &__form-name {
+        display: flex;
+        gap: 18px;
+
+        input {
+            width: 50%;
+        }
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 16px;
+        background-color: #fff;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .contact {
+        padding-bottom: 70px;
+        &__container {
+            gap: 24px;
+            margin-top: 48px;
+            height: auto;
+            padding: 24px;
+        }
+
+        &__aside {
+            width: auto;
+            padding: 24px;
+            bottom: 0;
+        }
+
+        &__form {
+            align-self: center;
+            margin-right: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .contact {
+        padding-bottom: 15px;
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 36px;
+            margin-top: 0;
+        }
+
+        &__form {
+            margin-right: 0;
+        }
+
+        &__form-name{
+            flex-direction: column;
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
