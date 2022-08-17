@@ -27,6 +27,8 @@
         padding: 32px;
         margin-top: 48px;
         position: relative;
+        min-height: 150px;
+        height: 170px;
 
         &::before {
             content: "";
